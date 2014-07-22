@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="steamWorkshopDownloaderApp">
+<head>
+	<meta charset="utf-8">
+	<title>Steam Workshop Downloader</title>
+</head>
+<body>
+
+<div>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+    </ul>
+</div>
+<div ng-view>
+</div>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-route.min.js"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+<script src="{{ url_for('static', filename='js/controllers.js') }}"></script>
+<script src="{{ url_for('static', filename='js/services.js') }}"></script>
+<script src="{{ url_for('static', filename='js/directives.js') }}"></script>
+<script src="{{ url_for('static', filename='js/filters.js') }}"></script>
+</body>
+</html>
