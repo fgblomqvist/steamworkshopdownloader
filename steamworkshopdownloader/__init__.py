@@ -7,5 +7,5 @@ app.config.from_object('steamworkshopdownloader.settings')
 app.url_map.strict_slashes = False
 
 import steamworkshopdownloader.core
-import steamworkshopdownloader.models
+import steamworkshopdownloader.api
 import steamworkshopdownloader.controllers
