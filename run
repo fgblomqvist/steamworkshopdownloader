@@ -1,3 +1,3 @@
 #!/bin/bash
 grunt production
-gunicorn runserver:app -w 3
+newrelic-admin run-program gunicorn runserver:app -w 3
