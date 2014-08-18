@@ -4,13 +4,23 @@
 	<meta charset="utf-8">
 	<title>Steam Workshop Downloader</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="//fonts.googleapis.com/css?family=Acme&subset=latin" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.min.css') }}">
 </head>
 <body>
+<div class="wrapper container">
+<header>
+<h1 class="headline">Steam Workshop Downloader</h1>
+<h2 class="tagline">It doesn't matter if you're 9 or 99, it doesn't get easier than this!</h2>
+</header>
 
-<div ui-view>
+<main ui-view>
+</main>
+<hr>
+<footer>
+<a class="creator-link" href="https://github.com/fgblomqvist">This site was created in 145 BPM using rainbow energy and coke.</a>
+</footer>
 </div>
-
 
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>

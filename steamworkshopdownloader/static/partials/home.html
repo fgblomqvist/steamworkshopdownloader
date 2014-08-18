@@ -1,23 +1,16 @@
-<div class="container">
+<input type="text" class="form-control" ng-model="steamworkshop_url" ng-change="getAddon()" placeholder="Enter Steam Workshop URL...">
 
-    <h1>Steam Workshop Downloader</h1>
-    <input type="text" class="form-control" ng-model="steamworkshop_url" ng-change="getAddon()" placeholder="Enter Steam Workshop url">
-
-    <div class="panel panel-default">
-        <div class="panel-body">
-            <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-2">
-                    <img ng-src="{[{ file.preview_url }]}" ng-show="file.preview_url">
-                </div>
-                <div class="col-md-10">
-                    <h3>{[{ file.title }]}</h3>
-                    <a ng-href="{[{ file.file_url }]}" ng-show="file.file_url">Download ({[{ file.file_size | bytes }]})</a>
-                    <span ng-show="message">{[{ message }]}</span>
-                </div>
+<div class="addon-info panel panel-default" ng-show="file">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-3">
+                <img class="addon__thumbnail" ng-src="{[{ file.preview_url }]}" ng-show="file.preview_url">
             </div>
+            <div class="col-sm-9">
+                <h3>{[{ file.title }]}</h3>
+                <a class="addon__download-button" ng-href="{[{ file.file_url }]}" ng-show="file.file_url">Download ({[{ file.file_size | bytes }]})</a>
+                <span ng-show="message">{[{ message }]}</span>
             </div>
         </div>
     </div>
-
 </div>

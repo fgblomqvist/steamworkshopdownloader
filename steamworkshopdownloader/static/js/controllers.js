@@ -1,7 +1,5 @@
 'use strict';
 
-/* Controllers */
-
 function IndexController($scope, $http) {
 
     $scope.getAddon = function() {
@@ -25,8 +23,4 @@ function IndexController($scope, $http) {
                 $scope.message = data.message;
             });
     };
-}
-
-function AboutController($scope) {
-
 }

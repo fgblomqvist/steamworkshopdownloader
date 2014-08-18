@@ -15,11 +15,6 @@ angular.module('steamWorkshopDownloaderApp', ['ui.router', 'steamWorkshopDownloa
 			templateUrl: 'static/partials/home.html',
 			controller: IndexController
 		})
-		.state('about', {
-            url: '/about',
-			templateUrl: 'static/partials/about.html',
-			controller: AboutController
-		});
 
         $locationProvider.html5Mode(true);
 	}]);
