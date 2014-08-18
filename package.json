@@ -1,0 +1,9 @@
+{
+  "name": "steamworkshopdownloader",
+  "version": "0.0.1",
+  "dependencies": {
+    "grunt-cli": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-watch": "latest"
+  }
+}

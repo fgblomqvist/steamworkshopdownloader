@@ -1,8 +1,7 @@
 .idea/
+node_modules/
 
 *.min.*
-*.rangeSlider.*
-games.json
 
 *~
 
