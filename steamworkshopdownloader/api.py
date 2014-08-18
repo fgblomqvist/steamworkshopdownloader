@@ -22,7 +22,11 @@ class SteamWorkshop(Resource):
 
         if not data['result'] == 1:
             # either no results or something is wrong
-            return {'message': 'No entry with that ID was found', 'status_code': 404}, 404
+            return {'message': 'No entry with that ID was found'}, 404
+
+        if not data['title']:
+            # not a valid workshop file, maybe a screenshot or other media
+            return {'message': 'The ID does not belong to a valid workshop file'}, 400
 
         # only expose some of the data to prevent api misuse
         response = {
@@ -33,5 +37,3 @@ class SteamWorkshop(Resource):
         }
 
         return response
-
-
