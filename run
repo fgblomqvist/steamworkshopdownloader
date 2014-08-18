@@ -1,3 +1,3 @@
 #!/bin/bash
-grunt
+grunt production
 gunicorn runserver:app -w 3
