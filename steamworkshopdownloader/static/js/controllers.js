@@ -7,8 +7,10 @@ function IndexController($scope, $http) {
         // reset the message
         $scope.message = "";
 
-        if (isBlank($scope.steamworkshop_url))
+        if (isBlank($scope.steamworkshop_url)) {
+            $scope.file = {};
             return;
+        }
 
         // filter out the id of the url
         var matches = $scope.steamworkshop_url.match(/id=(\d+)/);
@@ -19,13 +21,17 @@ function IndexController($scope, $http) {
             return;
         }
 
+        $scope.loading = true;
+
         $http.post("/api/workshop/" + matches[1])
             .success(function(data) {
                 $scope.message = "";
+                $scope.loading = false;
                 $scope.file = data;
             })
             .error(function(data) {
                 $scope.file = {};
+                $scope.loading = false;
                 $scope.message = data.message;
             });
     };
