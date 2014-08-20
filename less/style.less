@@ -5,6 +5,13 @@ html, body {
 body {
   background-image: url('/static/img/stripes.png');
   color: #d9d9d9;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .wrapper {
@@ -14,22 +21,30 @@ body {
 
 .headline {
   margin-bottom: 0;
-  font-family: 'Acme', sans-serif;
+  margin-left: -2px;
+  font-family: 'Oswald', sans-serif;
   font-weight: bold;
   font-size: 50px;
-  color: #111;
-  text-shadow: 0px 1px 2px #555;
+  color: #FFF;
+
+  &__workshop {
+    color: #888;
+  }
 }
 
 .tagline {
   margin-top: 5px;
-  margin-left: 3px;
   font-size: 18px;
   color: #666;
+  font-weight: 400;
 }
 
 main {
   margin: 50px 0;
+}
+
+.steamworkshopurl {
+  color: #333;
 }
 
 .panel {
@@ -47,11 +62,12 @@ main {
 .addon__download-button {
   border-radius: 4px;
   border: 2px solid #464646;
-  padding: 7px;
+  padding: 7px 12px;
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
   color: #fff;
+
   background: #a4d007;
   background: -moz-linear-gradient(top, #a4d007 5%, #6b8805 95%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #a4d007), color-stop(95%, #6b8805));
