@@ -29,6 +29,13 @@ module.exports = function(grunt) {
         options: {
           livereload: true
         }
+      },
+      html: {
+        files: ['steamworkshopdownloader/static/partials/**/*.html',
+                'steamworkshopdownloader/templates/**/*.html'],
+        options: {
+          livereload: true
+        }
       }
     }
   });
