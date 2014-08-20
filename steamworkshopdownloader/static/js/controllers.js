@@ -16,6 +16,7 @@ function IndexController($scope, $http) {
 
         $http.post("/api/workshop/" + wid)
             .success(function(data) {
+                $scope.message = "";
                 $scope.file = data;
             })
             .error(function(data) {
