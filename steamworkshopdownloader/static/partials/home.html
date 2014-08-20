@@ -1,4 +1,7 @@
-<input type="text" class="form-control" ng-model="steamworkshop_url" ng-change="getAddon()" placeholder="Enter Steam Workshop URL...">
+<div class="form-group">
+    <label for="steamworkshopurl">Enter the URL to an item in the Steam Workshop:</label>
+    <input type="text" id="steamworkshopurl" class="form-control" ng-model="steamworkshop_url" ng-change="getAddon()" placeholder="e.g. http://steamcommunity.com/sharedfiles/filedetails/?id=104910430">
+</div>
 
 <div class="addon-info panel panel-default" ng-show="file">
     <div class="panel-body">
