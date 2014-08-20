@@ -7,14 +7,19 @@ function IndexController($scope, $http) {
         // reset the message
         $scope.message = "";
 
-        // filter out the id of the url
-        var wid = $scope.steamworkshop_url.match(/id=(\d+)/)[1];
-
-        // check for invalid url
-        if (!wid)
+        if (isBlank($scope.steamworkshop_url))
             return;
 
-        $http.post("/api/workshop/" + wid)
+        // filter out the id of the url
+        var matches = $scope.steamworkshop_url.match(/id=(\d+)/);
+
+        // check for invalid url
+        if (!matches) {
+            $scope.message = "That URL is DEFINITELY not correct!";
+            return;
+        }
+
+        $http.post("/api/workshop/" + matches[1])
             .success(function(data) {
                 $scope.message = "";
                 $scope.file = data;
