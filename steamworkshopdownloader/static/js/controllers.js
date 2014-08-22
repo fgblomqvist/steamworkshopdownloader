@@ -1,6 +1,6 @@
 'use strict';
 
-function IndexController($scope, $http) {
+function IndexController($scope, SteamWorkshop) {
 
     $scope.getAddon = function() {
 
@@ -23,16 +23,17 @@ function IndexController($scope, $http) {
 
         $scope.loading = true;
 
-        $http.post("/api/workshop/" + matches[1])
-            .success(function(data) {
-                $scope.message = "";
-                $scope.loading = false;
-                $scope.file = data;
-            })
-            .error(function(data) {
-                $scope.file = {};
-                $scope.loading = false;
-                $scope.message = data.message;
-            });
+        SteamWorkshop.get({
+            wid: matches[1]
+        }, function(response) {
+            $scope.message = "";
+            $scope.file = response;
+            $scope.loading = false;
+
+        }, function(error) {
+            $scope.file = {};
+            $scope.message = error.data.message;
+            $scope.loading = false;
+        });
     };
 }

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('steamWorkshopDownloaderApp', ['ui.router', 'steamWorkshopDownloaderApp.filters'])
+angular.module('steamWorkshopDownloaderApp', ['ui.router', 'steamWorkshopDownloaderApp.filters', 'steamWorkshopDownloaderApp.services'])
 	.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$interpolateProvider',
 		function($urlRouterProvider, $stateProvider, $locationProvider, $interpolateProvider) {
 

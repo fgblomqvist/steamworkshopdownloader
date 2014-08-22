@@ -7,7 +7,7 @@ class SteamWorkshop(Resource):
 
     url = 'http://api.steampowered.com/ISteamRemoteStorage/GetPublishedFileDetails/v0001/'
 
-    def post(self, wid):
+    def get(self, wid):
 
         payload = {'itemcount': 1, 'publishedfileids[0]': wid, 'key': os.environ['STEAM_API_KEY']}
 
