@@ -30,6 +30,8 @@ function IndexController($scope, SteamWorkshop) {
             $scope.file = response;
             $scope.loading = false;
 
+            ga('send', 'event', 'Addon', 'View');
+
         }, function(error) {
             $scope.file = {};
             $scope.message = error.data.message;

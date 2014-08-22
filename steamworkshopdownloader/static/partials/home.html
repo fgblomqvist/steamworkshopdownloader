@@ -15,7 +15,7 @@
             </div>
             <div class="col-sm-9">
                 <h3>{[{ file.title }]}</h3>
-                <a class="addon__download-button" ng-href="{[{ file.file_url }]}">Download ({[{ file.file_size | bytes }]})</a>
+                <a class="addon__download-button" ng-href="{[{ file.file_url }]}" onclick="ga('send', 'event', 'Addon', 'Download');">Download ({[{ file.file_size | bytes }]})</a>
             </div>
         </div>
     </div>
