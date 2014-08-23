@@ -4,7 +4,7 @@ window.fbAsyncInit = function () {
     });
 
     FB.Event.subscribe('edge.create', function () {
-        ga('send', 'social', 'facebook', 'like', 'http://steamworkshopdownloader.com');
+        ga('send', 'social', 'Facebook', 'Like', 'http://steamworkshopdownloader.com/');
     });
 };
 
@@ -14,7 +14,7 @@ function isBlank(str) {
 
 function trackOutboundLink(e) {
     var url = e.getAttribute('href');
-    ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
+    ga('send', 'event', 'Outbound', 'Click', url, {'hitCallback':
         function () {
             document.location = url;
         }
