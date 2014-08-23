@@ -1,6 +1,6 @@
 <div class="form-group">
     <label for="steamworkshopurl">Enter the URL to an item in the Steam Workshop:</label>
-    <div style="position: relative;">
+    <div class="steamworkshopurl-form">
         <input type="text" id="steamworkshopurl" class="form-control steamworkshopurl" ng-model="steamworkshop_url" ng-change="getAddon()" placeholder="e.g. http://steamcommunity.com/sharedfiles/filedetails/?id=104910430">
         <i class="glyphicon glyphicon-refresh icon-spin loading-icon" ng-show="loading"></i>
     </div>
@@ -15,7 +15,7 @@
             </div>
             <div class="col-sm-9">
                 <h3>{[{ file.title }]}</h3>
-                <a class="addon__download-button" ng-href="{[{ file.file_url }]}" onclick="ga('send', 'event', 'Addon', 'Download');">Download ({[{ file.file_size | bytes }]})</a>
+                <a class="addon__download-button" ng-href="{[{ file.file_url }]}" ng-click="download()">Download ({[{ file.file_size | bytes }]})</a>
             </div>
         </div>
     </div>

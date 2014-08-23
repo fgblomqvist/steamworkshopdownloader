@@ -37,5 +37,18 @@ function IndexController($scope, SteamWorkshop) {
             $scope.message = error.data.message;
             $scope.loading = false;
         });
+
+        $scope.download = function() {
+            if (!$scope.file.title)
+                return;
+
+            ga('send', 'event', {
+                'eventCategory': 'Addon',
+                'eventAction': 'Download',
+                'hitCallback': function () {
+                    document.location = $scope.file.file_url;
+                }
+            });
+        };
     };
 }
