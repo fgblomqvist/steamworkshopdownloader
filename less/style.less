@@ -1,3 +1,5 @@
+@smallscreen: ~"only screen and (max-width: 768px)";
+
 html, body {
   height: 100%;
 }
@@ -17,6 +19,10 @@ label {
 .wrapper {
   max-width: 900px;
   padding-top: 10%;
+
+  @media @smallscreen {
+    padding-top: 0;
+  }
 }
 
 .headline {
@@ -101,10 +107,22 @@ main {
 
 .addon-info {
   margin-top: 50px;
+
+  @media @smallscreen {
+    text-align: center;
+  }
 }
 
 .addon__thumbnail {
   width: 100%;
+
+  @media @smallscreen {
+    max-width: 200px;
+  }
+}
+
+.addon__title {
+  display: inline-block;
 }
 
 .addon__download-button {
@@ -151,6 +169,15 @@ footer {
   font-size: 12px;
 }
 
+.creator-link {
+  float: left;
+  display: block;
+
+  @media @smallscreen {
+    margin-bottom: 10px;
+  }
+}
+
 .creator-link, .creator-link:hover {
   color: inherit;
   text-decoration: none;
@@ -164,6 +191,10 @@ footer {
   -o-transition: opacity 0.25s ease-in;
   -ms-transition: opacity 0.25s ease-in;
   transition: opacity 0.25s ease-in;
+
+  @media @smallscreen {
+    margin-bottom: 10px;
+  }
 }
 
 .social-buttons.show {
