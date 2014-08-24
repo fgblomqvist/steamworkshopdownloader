@@ -6,7 +6,7 @@
     </div>
 </div>
 
-<div class="addon-info panel panel-default" ng-show="file.title || message">
+<div class="addon-info panel panel-default" ng-show="file.title || message" ui-view>
     <div class="panel-body">
         <div class="message" ng-show="!file.title && message">{[{ message }]}</div>
         <div class="row" ng-show="file.title">

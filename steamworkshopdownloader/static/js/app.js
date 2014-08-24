@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('steamWorkshopDownloaderApp', ['ui.router', 'steamWorkshopDownloaderApp.filters', 'steamWorkshopDownloaderApp.services'])
+angular.module('steamWorkshopDownloaderApp', ['ui.router', 'steamWorkshopDownloaderApp.controllers', 'steamWorkshopDownloaderApp.filters', 'steamWorkshopDownloaderApp.services'])
 	.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$interpolateProvider',
 		function($urlRouterProvider, $stateProvider, $locationProvider, $interpolateProvider) {
 
@@ -12,9 +12,13 @@ angular.module('steamWorkshopDownloaderApp', ['ui.router', 'steamWorkshopDownloa
 		$stateProvider
 		.state('home', {
             url: '/',
-			templateUrl: 'static/partials/home.html',
-			controller: IndexController
+			templateUrl: '/static/partials/home.html',
+			controller: 'IndexCtrl'
 		})
+        .state('home.view', {
+            url: 'view/{wid:[0-9]+}',
+            controller: 'ViewCtrl'
+        });
 
         $locationProvider.html5Mode(true);
 	}]);
