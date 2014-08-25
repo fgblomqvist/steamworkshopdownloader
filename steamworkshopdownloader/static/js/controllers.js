@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('steamWorkshopDownloaderApp.controllers', [])
-    .controller('IndexCtrl', ['$scope', 'SteamWorkshop', function ($scope, SteamWorkshop) {
+    .controller('IndexCtrl', ['$scope', '$state', function ($scope, $state) {
 
-        $scope.getAddon = function () {
+        $scope.view = function() {
 
             // reset the message
             $scope.message = "";
@@ -24,8 +24,24 @@ angular.module('steamWorkshopDownloaderApp.controllers', [])
 
             $scope.loading = true;
 
+            $state.go('home.view', {wid: matches[1]});
+        }
+
+    }])
+    .controller('ViewCtrl', ['$scope', '$stateParams', 'SteamWorkshop', function ($scope, $stateParams, SteamWorkshop) {
+
+        // check if the user came here directly (input box will be empty
+        if (!$scope.$parent.steamworkshop_url)
+            // fill in the input box for the looks
+            $scope.$parent.steamworkshop_url = 'http://steamcommunity.com/sharedfiles/filedetails/?id=' + $stateParams['wid'];
+
+        $scope.getAddon($stateParams['wid']);
+
+
+        $scope.getAddon = function (wid) {
+
             SteamWorkshop.get({
-                wid: matches[1]
+                wid: wid
             }, function (response) {
                 $scope.message = "";
                 $scope.file = response;
@@ -52,10 +68,5 @@ angular.module('steamWorkshopDownloaderApp.controllers', [])
                 });
             };
         };
-    }])
-    .controller('ViewCtrl', ['$scope', '$stateParams', function ($scope, $stateParams) {
-
-        $scope.$parent.steamworkshop_url = 'http://steamcommunity.com/sharedfiles/filedetails/?id=' + $stateParams['wid'];
-        $scope.getAddon();
 
     }]);
