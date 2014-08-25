@@ -22,4 +22,11 @@ angular.module('steamWorkshopDownloaderApp', ['ui.router', 'steamWorkshopDownloa
         });
 
         $locationProvider.html5Mode(true);
-	}]);
+
+	}])
+    .run(['$rootScope', '$location', function($rootScope, $location){
+        $rootScope.$on('$stateChangeSuccess',
+            function (event, toState, toParams, fromState, fromParams) {
+                ga('send', 'pageview', { page: $location.path() });
+            });
+    }]);
