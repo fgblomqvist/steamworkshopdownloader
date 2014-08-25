@@ -8,8 +8,7 @@ from steamworkshopdownloader.core import api
 
 
 @app.route('/')
-@app.route('/about')
-@app.route('/blog')
+@app.route('/view/<wid>')
 def basic_pages(**kwargs):
     return render_template('index.html')
 

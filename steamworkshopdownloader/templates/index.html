@@ -28,6 +28,7 @@
 </footer>
 </div>
 
+{% include 'ganalytics.html' %}
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-resource.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
@@ -37,7 +38,6 @@
 <script src="{{ url_for('static', filename='js/directives.js') }}"></script>
 <script src="{{ url_for('static', filename='js/filters.js') }}"></script>
 <script src="{{ url_for('static', filename='js/other.js') }}"></script>
-{% include 'ganalytics.html' %}
 {% include 'social.html' %}
 
 </body>
