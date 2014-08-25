@@ -1,22 +1,9 @@
-<div class="form-group">
+<section class="form-group">
     <label for="steamworkshopurl">Enter the URL to an item in the Steam Workshop:</label>
     <div class="steamworkshopurl-form">
         <input type="text" id="steamworkshopurl" class="form-control steamworkshopurl" ng-model="steamworkshop_url" ng-change="view()" placeholder="e.g. http://steamcommunity.com/sharedfiles/filedetails/?id=104910430">
         <i class="glyphicon glyphicon-refresh icon-spin loading-icon" ng-show="loading"></i>
     </div>
-</div>
+</section>
 
-<div class="addon-info panel panel-default" ng-show="file.title || message" ui-view>
-    <div class="panel-body">
-        <div class="message" ng-show="!file.title && message">{[{ message }]}</div>
-        <div class="row" ng-show="file.title">
-            <div class="col-sm-3">
-                <img class="addon__thumbnail img-rounded" ng-src="{[{ file.preview_url }]}">
-            </div>
-            <div class="col-sm-9">
-                <h3 class="addon__title">{[{ file.title }]}</h3><br>
-                <a class="addon__download-button" ng-href="{[{ file.file_url }]}" ng-click="download()" download>Download ({[{ file.file_size | bytes }]})</a>
-            </div>
-        </div>
-    </div>
-</div>
+<section ui-view></section>

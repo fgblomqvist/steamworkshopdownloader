@@ -17,6 +17,7 @@ angular.module('steamWorkshopDownloaderApp', ['ui.router', 'steamWorkshopDownloa
 		})
         .state('home.view', {
             url: 'view/{wid:[0-9]+}',
+            templateUrl: '/static/partials/home-view.html',
             controller: 'ViewCtrl'
         });
 
