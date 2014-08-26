@@ -1,4 +1,5 @@
-@smallscreen: ~"only screen and (max-width: 768px)";
+@small:  ~"only screen and (max-width: 768px)";
+@medium: ~"only screen and (max-width: 992px)";
 
 html, body {
   height: 100%;
@@ -20,7 +21,7 @@ label {
   max-width: 900px;
   padding-top: 10%;
 
-  @media @smallscreen {
+  @media @small {
     padding-top: 0;
   }
 }
@@ -111,7 +112,7 @@ main {
 .addon-info {
   margin-top: 50px;
 
-  @media @smallscreen {
+  @media @small {
     text-align: center;
   }
 }
@@ -119,7 +120,7 @@ main {
 .addon__thumbnail {
   width: 100%;
 
-  @media @smallscreen {
+  @media @small {
     max-width: 200px;
   }
 }
@@ -170,14 +171,23 @@ footer {
   margin-bottom: 20px;
   color: #777;
   font-size: 12px;
+
+  @media @medium {
+    text-align: center;
+  }
+
+  div:first-child {
+    margin-bottom: 10px;
+  }
 }
 
-.creator-link {
-  float: left;
-  display: block;
+.userscript-download {
+  float: right;
+  margin-left: 8px;
+  line-height: 1.4;
 
-  @media @smallscreen {
-    margin-bottom: 10px;
+  @media @medium {
+    float: none;
   }
 }
 
@@ -188,6 +198,7 @@ footer {
 
 .social-buttons {
   float: right;
+  display: inline-block;
   opacity: 0;
   -webkit-transition: opacity 0.25s ease-in;
   -moz-transition: opacity 0.25s ease-in;
@@ -195,8 +206,8 @@ footer {
   -ms-transition: opacity 0.25s ease-in;
   transition: opacity 0.25s ease-in;
 
-  @media @smallscreen {
-    margin-bottom: 10px;
+  @media @medium {
+    float: none;
   }
 }
 
