@@ -28,6 +28,11 @@ class SteamWorkshop(Resource):
             # not a valid workshop file, maybe a screenshot or other media
             return {'message': 'The ID does not belong to a valid workshop file'}, 400
 
+        if 'file_size' in data and not 'file_url' in data:
+            # user are not allowed to download this file
+            return {'message': 'The game that this item belongs too does not allow '
+                               'downloading/subscribing of its items...BUMMER!'}, 403
+
         # only expose some of the data to prevent api misuse
         response = {
             'title': data['title'],
