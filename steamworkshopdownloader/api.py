@@ -16,7 +16,7 @@ class SteamWorkshop(Resource):
 
         if r.status_code != 200 or 'response' not in data or 'publishedfiledetails' not in data['response']:
             # invalid response
-            pass
+            return {'message': "Something is not right...hey why are you looking at me, I don't know everything!"}, 400
 
         data = data['response']['publishedfiledetails'][0]
 
