@@ -22,16 +22,21 @@ class SteamWorkshop(Resource):
 
         if not data['result'] == 1:
             # either no results or something is wrong
-            return {'message': 'No entry with that ID was found'}, 404
+            return {'message': 'No item with that ID was found'}, 404
 
         if not data['title']:
             # not a valid workshop file, maybe a screenshot or other media
-            return {'message': 'The ID does not belong to a valid workshop file'}, 400
+            return {'message': 'The ID does not belong to a valid workshop item'}, 400
 
         if 'file_size' in data and not 'file_url' in data:
             # user are not allowed to download this file
             return {'message': 'The game that this item belongs too does not allow '
                                'downloading/subscribing of its items...BUMMER!'}, 403
+
+        if data['filename'].startswith('steamworkshop/collection/'):
+            # this is not a normal item, but a collection of items
+            return {'message': 'This is not just one item but a collection of items...'
+                               'just download them one at a time, slacker!'}, 400
 
         # only expose some of the data to prevent api misuse
         response = {
