@@ -4,6 +4,7 @@
   "dependencies": {
     "grunt-cli": "latest",
     "grunt-contrib-less": "latest",
-    "grunt-contrib-watch": "latest"
+    "grunt-contrib-watch": "latest",
+    "grunt-cachebuster": "latest"
   }
 }
