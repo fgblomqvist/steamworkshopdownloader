@@ -6,7 +6,7 @@
     <link rel="icon" sizes="16x16 32x32 64x64" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,300|Oswald:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.min.css') | versioned }}">
 </head>
 <body>
 
@@ -35,15 +35,10 @@
 </div>
 
 {% include 'ganalytics.html' %}
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-resource.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
-<script src="{{ url_for('static', filename='js/app.js') }}"></script>
-<script src="{{ url_for('static', filename='js/controllers.js') }}"></script>
-<script src="{{ url_for('static', filename='js/services.js') }}"></script>
-<script src="{{ url_for('static', filename='js/directives.js') }}"></script>
-<script src="{{ url_for('static', filename='js/filters.js') }}"></script>
-<script src="{{ url_for('static', filename='js/other.js') }}"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-resource.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
+<script src="{{ url_for('static', filename='js/app.min.js') | versioned }}"></script>
 {% include 'social.html' %}
 
 </body>

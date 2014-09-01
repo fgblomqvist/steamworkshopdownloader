@@ -4,6 +4,9 @@
   "dependencies": {
     "grunt-cli": "latest",
     "grunt-contrib-less": "latest",
-    "grunt-contrib-watch": "latest"
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-cachebuster": "latest",
+    "grunt-ng-annotate": "latest"
   }
 }
