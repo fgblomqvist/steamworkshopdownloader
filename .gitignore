@@ -2,6 +2,7 @@
 node_modules/
 
 *.min.*
+cachebusters.json
 
 *~
 
