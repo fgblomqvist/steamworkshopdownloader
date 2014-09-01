@@ -41,7 +41,7 @@
                 SteamWorkshop.get({
                     wid: wid
                 }, function (response) {
-                    $scope.message = "";
+                    $scope.$parent.message = "";
                     $scope.file = response;
                     $scope.$parent.loading = false;
 
@@ -49,7 +49,7 @@
 
                 }, function (error) {
                     $scope.file = {};
-                    $scope.message = error.data.message;
+                    $scope.$parent.message = error.data.message;
                     $scope.$parent.loading = false;
                 });
             };
