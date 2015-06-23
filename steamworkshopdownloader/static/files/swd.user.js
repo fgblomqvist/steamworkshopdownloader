@@ -3,7 +3,7 @@
 // @namespace      http://github.com/fgblomqvist
 // @description    Adds a button to the Steam Workshop pages that lets you head straight to the specific addon page at steamworkshopdownloader.com
 // @include        *steamcommunity.com/sharedfiles/filedetails/?id=*
-// @version        1.0
+// @version        1.0.1
 // @downloadURL    http://steamworkshopdownloader.com/static/files/swd.user.js
 // ==/UserScript==
 
@@ -13,9 +13,9 @@ var id = patt.exec(document.URL);
 var realButton = document.getElementById("SubscribeItemBtn");
 
 // shorten the text in the box because it will be in the way
-realButton.parentNode.getElementsByTagName("h1")[0].innerHTML = "Download or Subscribe to the right";
+realButton.parentNode.getElementsByTagName("h1")[0].innerHTML = "Download/Subscribe to the right";
 
-var myButtonPosition = realButton.offsetWidth + 20
+var myButtonPosition = realButton.offsetWidth + 20;
 
 var button = document.createElement('a');
 button.setAttribute('class', 'btn_green_white_innerfade btn_border_2px btn_medium');
