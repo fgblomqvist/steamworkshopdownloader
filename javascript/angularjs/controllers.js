@@ -67,6 +67,7 @@
                 });
             };
 
+            // get the addon data when the view has loaded
             $scope.getAddon($stateParams['wid']);
 
         });

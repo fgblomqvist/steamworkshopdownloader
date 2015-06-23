@@ -28,10 +28,10 @@ class SteamWorkshop(Resource):
             # not a valid workshop file, maybe a screenshot or other media
             return {'message': 'The ID does not belong to a valid workshop item'}, 400
 
-        if 'file_size' in data and not 'file_url' in data:
+        if 'file_size' in data and ('file_url' not in data or not data['file_url']):
             # user are not allowed to download this file
             return {'message': 'The game that this item belongs too does not allow '
-                               'downloading/subscribing of its items...BUMMER!'}, 403
+                               'downloading of its items...BUMMER!'}, 403
 
         if data['filename'].startswith('steamworkshop/collection/'):
             # this is not a normal item, but a collection of items
