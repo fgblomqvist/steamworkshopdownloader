@@ -1,3 +1,0 @@
-#!/bin/bash
-grunt production
-newrelic-admin run-program gunicorn runserver:app -w 3
