@@ -3,4 +3,4 @@ web:
   ports:
     - "80:80"
   env_file:
-    - docker/config.env
+    - ./docker/config.env

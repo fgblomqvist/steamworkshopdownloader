@@ -10,5 +10,5 @@ dependencies:
       
 test:
     override:
-        - docker-compose run -d --no-deps swd
-        - docker run swd nosetests
+        - docker-compose run -d --no-deps web
+        - docker run web nosetests
