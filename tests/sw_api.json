@@ -1,0 +1,49 @@
+{
+	"response": {
+		"result": 1,
+		"resultcount": 1,
+		"publishedfiledetails": [
+			{
+				"publishedfileid": "546392647",
+				"result": 1,
+				"creator": "76561197991989781",
+				"creator_app_id": 4000,
+				"consumer_app_id": 4000,
+				"filename": "uploads/addons/Media_Player.gm",
+				"file_size": 640143,
+				"file_url": "http://cloud-3.steamusercontent.com/ugc/402307447132895284/0A4D8CF53CB0DDDD770E111571930EF44851B6A4/",
+				"hcontent_file": "402307447132895284",
+				"preview_url": "http://images.akamai.steamusercontent.com/ugc/403430334757507103/51939B52ECCCA4B59BA139C0C148C2DDB12AEBD8/",
+				"hcontent_preview": "403430334757507103",
+				"title": "Media Player",
+				"description": "Watch videos or listen to music with friends in Sandbox—based on the [url=http://steamcommunity.com/sharedfiles/filedetails/?id=118824086]Cinema gamemode[/url].\r\n\r\n[h1]Features[/h1]\r\n[list]\r\n[*] Synchronized media playback\r\n[*][b] Supported services:[/b] YouTube, Twitch, SoundCloud, SHOUTcast\r\n[*] [b]Supported files:[/b] mp3, wav, ogg, jpg, png, webm\r\n[*] Intuitive queue and request interface\r\n[*] Multiple active media players\r\n[*] Dupe and save support; see [url=http://steamcommunity.com/workshop/filedetails/discussion/546392647/496880503072814671/]playlists[/url]\r\n[*] Queue repeat and shuffle modes\r\n[/list]\r\n\r\n[h1]Installation[/h1]\r\nThe [url=http://get.adobe.com/flashplayer/otherversions/]NPAPI version of Adobe Flash Player[/url] is required for Twitch playback. Mac OS X is not supported by the Media Player addon, sorry ([url=https://github.com/Facepunch/garrysmod-issues/issues/1347]reason[/url]).\r\n\r\n[h1]Usage[/h1]\r\n1. Spawn the Big Screen TV from the spawn menu ('Entities' tab > 'Media Player' category).\r\n2. Press use (E) on the TV to turn it on.\r\n3. Hold C while looking at the TV to reveal the media queue.\r\n4. Press the 'Add Media' button.\r\n5. Navigate to a supported media page and press the 'Request URL' button.\r\n6. Watch!\r\n\r\n[h1]Console Variables[/h1]\r\nmediaplayer_3daudio 0/1\r\nmediaplayer_allow_webpages 0/1\r\nmediaplayer_fullscreen 0/1\r\nmediaplayer_mute_unfocused 0/1\r\nmediaplayer_volume 0.0-1.0\r\n\r\n[h1]FAQ[/h1]\r\n[b]Q:[/b] Can the ads be closed on YouTube?\r\n[b]A:[/b] Yes. While in Sandbox, hold C to reveal the mouse cursor. Then simply click the 'x' on the ad that appears on the media player screen.\r\n\r\n[b]Q:[/b] How do I adjust the screen brightness?\r\n[b]A:[/b] The screen brightness is either caused by bloom or HDR. Try typing \"pp_bloom 0\" in console.\r\n\r\n[b]Q:[/b] Can I play local files from my harddrive?\r\n[b]A:[/b] Audio files are supported, but other players won't be able to hear them. You can request the full file path using the \"Request a supported URL\" text box (e.g. C:/Music/filename.mp3). Files with unicode characters are not supported due to a GMod bug.\r\n\r\n[b]Q:[/b] Why doesn't this work for Mac?\r\n[b]A:[/b] The Garry's Mod developers need to fix issues with the in-game browser on Mac. [url=https://github.com/Facepunch/garrysmod-requests/issues/531]Follow progress on GitHub.[/url]\r\n\r\n[h1]Links[/h1]\r\n[url=https://github.com/pixeltailgames/gm-mediaplayer]Source Code[/url]\r\n[url=https://github.com/pixeltailgames/gm-mediaplayer/wiki/Getting-Started]Brief Developer Getting Started Guide[/url]\r\n[url=http://www.gametracker.com/search/garrysmod/?search_by=server_variable&search_by2=mediaplayer_allow_webpages&query=&loc=_all&sort=0&order=ASC&searchipp=50]Servers using the Media Player addon[/url]\r\n\r\n[url=https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ER75ZWB434RVJ][img]https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif[/img][/url]\r\n\r\n[h1]Additional Credits[/h1]\r\n[url=http://steamcommunity.com/id/clopsy]Clopsy[/url] for design of the playback menu.\r\n[url=https://steamcommunity.com/id/MacDGuy]MacDGuy[/url] for the Big Screen TV model.\r\n\r\n[h1][b]Having an issue? Please post steps to reproduce in the [url=http://steamcommunity.com/workshop/filedetails/discussion/546392647/496880503059475138/]bug report discussion[/url], including any media links that you may have used. Issues relating to Mac can't be fixed as it's something Garry's Mod developers need to address.[/b][/h1]",
+				"time_created": 1446415579,
+				"time_updated": 1449286460,
+				"visibility": 0,
+				"banned": 0,
+				"ban_reason": "",
+				"subscriptions": 93439,
+				"favorited": 1850,
+				"lifetime_subscriptions": 104195,
+				"lifetime_favorited": 1921,
+				"views": 87587,
+				"tags": [
+					{
+						"tag": "misc"
+					},
+					{
+						"tag": "Fun"
+					},
+					{
+						"tag": "movie"
+					},
+					{
+						"tag": "Addon"
+					}
+				]
+				
+			}
+		]
+		
+	}
+}
