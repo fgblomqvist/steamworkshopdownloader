@@ -1,8 +1,6 @@
 machine:
   services:
       - docker
-  python:
-    version: 3.4.0
 
 dependencies:
   override:
@@ -10,5 +8,4 @@ dependencies:
       
 test:
     override:
-        - docker-compose run -d --no-deps web
-        - docker run web nosetests
+        - docker-compose run -d --no-deps web nosetests
