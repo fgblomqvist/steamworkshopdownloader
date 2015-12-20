@@ -3,7 +3,6 @@ node_modules/
 
 *.min.*
 cachebusters.json
-config.env
 
 *~
 

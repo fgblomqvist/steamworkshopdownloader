@@ -2,5 +2,5 @@ web:
   build: .
   ports:
     - "80:80"
-  env_file:
-    - ./docker/config.env
+  environment:
+    - STEAM_API_KEY
