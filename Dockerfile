@@ -2,20 +2,35 @@ FROM python:3.4
 MAINTAINER Fredrik Blomqvist <fredrik.blomqvist.95@gmail.com>
 
 RUN apt-get update
-RUN apt-get install -y nginx supervisor
+RUN apt-get install -y nginx supervisor npm
+
+RUN ln -s /usr/bin/nodejs /usr/bin/node
 
 # Add the code
 RUN mkdir /code
 COPY steamworkshopdownloader /code/steamworkshopdownloader
+COPY less /code/less
+COPY javascript /code/javascript
 COPY requirements.txt /code/requirements.txt
+COPY package.json /code/package.json
+COPY Gruntfile.js /code/Gruntfile.js
 COPY docker/newrelic.ini /code/newrelic.ini
 COPY docker/gunicorn.py /code/gunicorn.py
 
 # Add the tests
 COPY tests /code/tests
 
+RUN npm install -g grunt-cli
 RUN pip install gunicorn
 RUN pip install -r /code/requirements.txt
+
+WORKDIR /code
+RUN npm install
+
+# Generate the static files
+RUN grunt production
+
+WORKDIR /
 
 # Setup nginx
 RUN rm /etc/nginx/sites-enabled/default
