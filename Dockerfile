@@ -11,6 +11,9 @@ COPY requirements.txt /code/requirements.txt
 COPY docker/newrelic.ini /code/newrelic.ini
 COPY docker/gunicorn.py /code/gunicorn.py
 
+# Add the tests
+COPY tests /code/tests
+
 RUN pip install gunicorn
 RUN pip install -r /code/requirements.txt
 

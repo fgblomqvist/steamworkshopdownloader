@@ -8,4 +8,5 @@ dependencies:
       
 test:
     override:
-        - docker-compose run -d --no-deps web nosetests
+        - docker-compose build web
+        - docker-compose run --no-deps web nosetests -w /code
