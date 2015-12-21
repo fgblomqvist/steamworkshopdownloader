@@ -10,5 +10,5 @@ test:
     override:
         - mkdir -p $CIRCLE_TEST_REPORTS/nose
         - docker-compose build web
-        - docker-compose run --no-deps web nosetests -w /code --with-xunit --xunit-file=nosetests.xml
-        - sudo docker cp $(docker ps -alq):/nosetests.xml $CIRCLE_TEST_REPORTS/nose/nosetests.xml
+        - docker-compose run --no-deps web nosetests -w /code --with-xunit
+        - docker cp steamworkshopdownloader_web_run_1:/nosetests.xml $CIRCLE_TEST_REPORTS/nose/nosetests.xml
