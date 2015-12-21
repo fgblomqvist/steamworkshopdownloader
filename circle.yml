@@ -11,4 +11,4 @@ test:
         - mkdir -p $CIRCLE_TEST_REPORTS/nose
         - docker-compose build web
         - docker-compose run --no-deps web nosetests -w /code --with-xunit --xunit-file=nosetests.xml
-        - docker cp $(docker ps -alq):/nosetests.xml $CIRCLE_TEST_REPORTS/nose/nosetests.xml
+        - sudo docker cp $(docker ps -alq):/nosetests.xml $CIRCLE_TEST_REPORTS/nose/nosetests.xml
