@@ -16,10 +16,17 @@
 <h2 class="tagline">It doesn't matter if you're 9 or 99, it doesn't get easier than this!</h2>
 </header>
 
-<main ui-view>
+<main>
+    <section ui-view></section>
+
+    <section id="ad-wrapper" class="ad-wrapper">
+        <section id="ad-hint" class="ad-hint">AD — BECAUSE $$$ DOESN'T GROW ON TREES</section>
+        <section id="ad" class="ad"></section>
+    </section>
 </main>
 
 <hr>
+
 <footer class="row">
     <div class="col-md-6">
         <a class="creator-link" href="https://github.com/fgblomqvist" onclick="trackOutboundLink(this); return false;">This site was created at 145 BPM using rainbow energy and coke.</a>

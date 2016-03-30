@@ -85,7 +85,7 @@ module.exports = function (grunt) {
                 }
             },
             js: {
-                files: ['steamworkshopdownloader/static/js/**/*.js'],
+                files: ['javascript/**/*.js'],
                 tasks: ['ngAnnotate', 'uglify:dev', 'cachebuster'],
                 options: {
                     livereload: true

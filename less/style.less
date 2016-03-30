@@ -19,7 +19,7 @@ label {
 
 .wrapper {
   max-width: 900px;
-  padding-top: 10%;
+  padding-top: 7%;
 
   @media @small {
     padding-top: 0;
@@ -110,7 +110,7 @@ main {
 }
 
 .addon-info {
-  margin-top: 50px;
+  margin-top: 30px;
 
   @media @small {
     text-align: center;
@@ -186,6 +186,33 @@ main {
 
   &__link {
     cursor: pointer;
+  }
+}
+
+.ad-wrapper {
+  display: none;
+
+  @media @small{
+    display: none !important;
+  }
+}
+
+.ad-hint {
+  margin-top: 30px;
+  font-size: 7px;
+  margin-left: 5px;
+}
+
+.ad {
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 0;
+  background: #1A1A1A;
+  overflow: hidden;
+
+  iframe {
+    margin-bottom: -6px;
   }
 }
 

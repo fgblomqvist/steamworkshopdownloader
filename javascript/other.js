@@ -1,3 +1,24 @@
+window.onload = function() {
+
+    // if the viewport is big enough, inject the ad
+    var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+
+    if (width <= 768) {
+        return;
+    }
+
+    // by doing a timeout of 0, the ad will be injected after the rest of the javascript has run,
+    // such as the social buttons
+    setTimeout(function(){
+        var adElement = document.getElementById("ad");
+        adElement.innerHTML =
+            "<iframe src='https://yepdigital.adk2.co/yepdigital/tags/xdirect/xdirect.html?p=72466953&serverdomain=yepdigital&size=728x90&secure=true&ct=html&ap=1300' height='90' width='728' frameborder='0' border='0' marginwidth='0' marginheight='0' scrolling='no'></iframe>";
+
+        // display the ad
+        document.getElementById("ad-wrapper").style.display = "block";
+    }, 0);
+};
+
 window.fbAsyncInit = function () {
     FB.Event.subscribe('xfbml.render', function () {
         document.getElementsByClassName("social-buttons")[0].style.opacity = "1";
