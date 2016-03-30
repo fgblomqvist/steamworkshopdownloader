@@ -11,12 +11,21 @@ class SteamWorkshop(Resource):
 
         payload = {'itemcount': 1, 'publishedfileids[0]': wid, 'key': os.environ['STEAM_API_KEY']}
 
-        r = requests.post(self.url, data=payload)
-        data = r.json()
+        try:
+            r = requests.post(self.url, data=payload)
+        except Exception:
+            # something went wrong
+            return {'message': "Steam Workshop is acting a little funky right now, try again later..."}, 400
 
-        if r.status_code != 200 or 'response' not in data or 'publishedfiledetails' not in data['response']:
+        if r.status_code != 200:
             # invalid response
             return {'message': "Something is not right...hey why are you looking at me, I don't know everything!"}, 400
+
+        data = r.json()
+
+        if 'response' not in data or 'publishedfiledetails' not in data['response']:
+            # invalid data
+            return {'message': "Here's the deal: Steam gave me garbage when I asked for the download link"}, 400
 
         data = data['response']['publishedfiledetails'][0]
 
