@@ -1,5 +1,5 @@
 from flask import Flask
-from flask.ext.versioned import Versioned
+from flaskext.versioned import Versioned
 from steamworkshopdownloader.versioned_drivers import HashMapDriver
 
 

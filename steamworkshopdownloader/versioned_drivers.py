@@ -1,6 +1,6 @@
 import json
 import os
-from flask.ext.versioned import VersionedError
+from flaskext.versioned import VersionedError
 
 
 class HashMapDriver():
