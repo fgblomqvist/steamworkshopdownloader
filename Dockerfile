@@ -1,10 +1,9 @@
-FROM python:3.4
+FROM python:3.7
 MAINTAINER Fredrik Blomqvist <fredrik.blomqvist.95@gmail.com>
 
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN apt-get update
-RUN apt-get install -y nginx supervisor npm
-
-RUN ln -s /usr/bin/nodejs /usr/bin/node
+RUN apt-get install -y nginx supervisor nodejs npm
 
 # Add the code
 RUN mkdir /code
@@ -14,12 +13,12 @@ COPY javascript /code/javascript
 COPY requirements.txt /code/requirements.txt
 COPY package.json /code/package.json
 COPY Gruntfile.js /code/Gruntfile.js
-COPY docker/newrelic.ini /code/newrelic.ini
 COPY docker/gunicorn.py /code/gunicorn.py
 
 # Add the tests
 COPY tests /code/tests
 
+RUN npm install grunt
 RUN npm install -g grunt-cli
 RUN pip install gunicorn
 RUN pip install -r /code/requirements.txt
@@ -44,8 +43,6 @@ COPY docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY docker/gunicorn.conf /etc/supervisor/conf.d/gunicorn.conf
 
 EXPOSE 80
-
-ENV NEW_RELIC_CONFIG_FILE=/code/newrelic.ini
 
 # Start processes
 CMD ["/usr/bin/supervisord"]

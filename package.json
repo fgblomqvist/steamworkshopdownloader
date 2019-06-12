@@ -2,11 +2,12 @@
   "name": "steamworkshopdownloader",
   "version": "0.0.1",
   "dependencies": {
+    "grunt": "^1.0.4",
+    "grunt-cachebuster": "latest",
     "grunt-cli": "latest",
     "grunt-contrib-less": "latest",
-    "grunt-contrib-watch": "latest",
     "grunt-contrib-uglify": "latest",
-    "grunt-cachebuster": "latest",
+    "grunt-contrib-watch": "latest",
     "grunt-ng-annotate": "latest"
   }
 }
