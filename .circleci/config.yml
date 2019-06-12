@@ -1,0 +1,18 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/python:latest
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          command: |
+            docker-compose build web
+            docker-compose run --no-deps web nosetests -w /code --with-xunit
+            mkdir testresults
+            docker cp $(docker ps -alq):/nosetests.xml testresults/nosetests.xml
+            
+      - store_test_results:
+          path: testresults            
