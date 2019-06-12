@@ -9,5 +9,5 @@ aniso8601==0.83
 itsdangerous==0.24
 newrelic==2.24.0.21
 pytz==2014.4
-requests==2.3.0
+requests==2.22.0
 six==1.7.3
