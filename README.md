@@ -1,5 +1,6 @@
-[![CircleCI Status for fgblomqvist/steamworkshopdownloader](https://img.shields.io/circleci/project/github/fgblomqvist/steamworkshopdownloader/master.svg)](https://circleci.com/gh/fgblomqvist/steamworkshopdownloader) 
 [![License](https://img.shields.io/badge/license-AGPL%20v3-blue.svg)](https://github.com/fgblomqvist/steamworkshopdownloader/blob/master/LICENSE)
+
+**This project was archived and shutdown in April 2020 due to most games having moved away from the IRemoteStorage API that this project utilized.**
 
 # Steam Workshop Downloader
 
