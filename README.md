@@ -11,3 +11,5 @@ the content in question.
 
 It was originally created during a short sprint back in the summer of 2014, and
 is the spiritual successor to *Gaddons*.
+
+![Screenshot](screenshot.png)
